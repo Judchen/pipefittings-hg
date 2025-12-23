@@ -99,57 +99,36 @@
     }
 
     /* PRODUCTS */
-    .products {
-      padding: 80px 0;
-      background: white;
-    }
-    .products h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 28px;
-      color: #003366;
-    }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .product-row {
-      display: contents;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
     .product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #003366;
-  transition: all 0.3s;
-  cursor: default;
-}
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
     .product-card:hover {
-  background: #e6f2ff;
-  transform: translateY(-3px);
-}
-    .product-img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  background: white;
-  padding: 10px;
-  border-radius: 6px;
-}
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .product-video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #eee;
+    }
     .product-card h3 {
-  font-size: 16px;
-  text-align: center;
-  font-weight: 500;
-  margin: 0;
-}
+      padding: 12px 10px;
+      font-size: 18px;
+      color: #003366;
+      text-align: center;
+    }
     /* FOOTER */
     .footer {
       text-align: center;
@@ -208,37 +187,64 @@
     <h2>Продукция</h2>
     <div class="product-grid">
 
-      <!-- Верхний ряд -->
-      <div class="product-card">
-        <img src="assets/img/veldollets.jpg" alt="Велдолеты" class="product-img">
-        <h3>Велдолеты</h3>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/elbows.jpg" alt="Отводы" class="product-img">
-        <h3>Отводы</h3>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/transitions.jpg" alt="Переходы" class="product-img">
-        <h3>Переходы</h3>
-      </div>
+      <!-- Велдолеты -->
+          <div class="product-card" onclick="toggleVideo('veldollets')">
+            <video id="veldollets" class="product-video" muted playsinline>
+              <source src="assets/videos/veldollets.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            <h3>Велдолеты</h3>
+          </div>
+
+          <!-- Отводы -->
+          <div class="product-card" onclick="toggleVideo('elbows')">
+            <video id="elbows" class="product-video" muted playsinline>
+              <source src="assets/videos/elbows.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            <h3>Отводы</h3>
+          </div>
+
+          <!-- Переходы -->
+          <div class="product-card" onclick="toggleVideo('transitions')">
+            <video id="transitions" class="product-video" muted playsinline>
+              <source src="assets/videos/transitions.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            <h3>Переходы</h3>
+          </div>
 
       <!-- Нижний ряд -->
-      <div class="product-card">
-        <img src="assets/img/tees.jpg" alt="Тройники" class="product-img">
-        <h3>Тройники</h3>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/flanges.jpg" alt="Фланцы" class="product-img">
-        <h3>Фланцы</h3>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/pipes.jpg" alt="Трубы" class="product-img">
-        <h3>Трубы</h3>
-      </div>
+       <!-- Тройники -->
+          <div class="product-card" onclick="toggleVideo('tees')">
+            <video id="tees" class="product-video" muted playsinline>
+              <source src="assets/videos/tees.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            <h3>Тройники</h3>
+          </div>
 
-    </div>
-  </div>
-</section>
+          <!-- Фланцы -->
+          <div class="product-card" onclick="toggleVideo('flanges')">
+            <video id="flanges" class="product-video" muted playsinline>
+              <source src="assets/videos/flanges.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            <h3>Фланцы</h3>
+          </div>
+
+          <!-- Трубы -->
+          <div class="product-card" onclick="toggleVideo('pipes')">
+            <video id="pipes" class="product-video" muted playsinline>
+              <source src="assets/videos/pipes.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            <h3>Трубы</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   <footer class="footer">
     <div class="container">
