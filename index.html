@@ -261,11 +261,15 @@
     </div>
   </footer>
 
-  <script>
-    <script>
+ <script>
 function playVideo(id) {
   const video = document.getElementById(id);
   if (video) {
+    // Останавливаем все остальные видео
+    document.querySelectorAll('video').forEach(v => {
+      if (v !== video) v.pause();
+    });
+    // Запускаем текущее
     video.play().catch(e => {
       console.warn("Автовоспроизведение заблокировано:", e);
     });
@@ -278,24 +282,19 @@ function pauseVideo(id) {
     video.pause();
   }
 }
-    function toggleVideo(id) {
-      const video = document.getElementById(id);
-      if (!video) return;
-      if (video.paused) {
-        document.querySelectorAll('video').forEach(v => {
-          if (v !== video) v.pause();
-        });
-        video.play().catch(e => console.warn("Ошибка воспроизведения:", e));
-      } else {
-        video.pause();
-      }
-    }
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('touchstart', () => {
-        const id = card.querySelector('video').id;
-        toggleVideo(id);
+
+// Поддержка мобильных: при касании — проигрывать
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.product-card').forEach(card => {
+    const videoId = card.querySelector('video')?.id;
+    if (videoId) {
+      card.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        playVideo(videoId);
       });
-    });
-  </script>
+    }
+  });
+});
+</script>
 </body>
 </html>
