@@ -262,6 +262,23 @@
   </footer>
 
   <script>
+    <script>
+function playVideo(id) {
+  const video = document.getElementById(id);
+  if (video) {
+    video.play().catch(e => {
+      console.warn("Автовоспроизведение заблокировано:", e);
+    });
+  }
+}
+
+function pauseVideo(id) {
+  const video = document.getElementById(id);
+  if (video) {
+    video.pause();
+  }
+}
+</script>
     function toggleVideo(id) {
       const video = document.getElementById(id);
       if (!video) return;
