@@ -205,55 +205,54 @@
         <h3>Велдолеты</h3>
       </div>
 
-          <!-- Отводы -->
-          <div class="product-card" onclick="toggleVideo('elbows')">
-            <video id="elbows" class="product-video" muted playsinline>
-              <source src="assets/videos/elbows.mp4" type="video/mp4">
-              Ваш браузер не поддерживает видео.
-            </video>
-            <h3>Отводы</h3>
-          </div>
-
-          <!-- Переходы -->
-          <div class="product-card" onclick="toggleVideo('transitions')">
-            <video id="transitions" class="product-video" muted playsinline>
-              <source src="assets/videos/transitions.mp4" type="video/mp4">
-              Ваш браузер не поддерживает видео.
-            </video>
-            <h3>Переходы</h3>
-          </div>
-
-      <!-- Нижний ряд -->
-       <!-- Тройники -->
-          <div class="product-card" onclick="toggleVideo('tees')">
-            <video id="tees" class="product-video" muted playsinline>
-              <source src="assets/videos/tees.mp4" type="video/mp4">
-              Ваш браузер не поддерживает видео.
-            </video>
-            <h3>Тройники</h3>
-          </div>
-
-          <!-- Фланцы -->
-          <div class="product-card" onclick="toggleVideo('flanges')">
-            <video id="flanges" class="product-video" muted playsinline>
-              <source src="assets/videos/flanges.mp4" type="video/mp4">
-              Ваш браузер не поддерживает видео.
-            </video>
-            <h3>Фланцы</h3>
-          </div>
-
-          <!-- Трубы -->
-          <div class="product-card" onclick="toggleVideo('pipes')">
-            <video id="pipes" class="product-video" muted playsinline>
-              <source src="assets/videos/pipes.mp4" type="video/mp4">
-              Ваш браузер не поддерживает видео.
-            </video>
-            <h3>Трубы</h3>
-          </div>
-
-        </div>
+         <!-- Отводы -->
+      <div class="product-card" onmouseenter="playVideo('elbows')" onmouseleave="pauseVideo('elbows')">
+        <video id="elbows" class="product-video" muted loop playsinline>
+          <source src="assets/videos/elbows.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <h3>Отводы</h3>
       </div>
-    </section>
+
+      <!-- Переходы -->
+      <div class="product-card" onmouseenter="playVideo('transitions')" onmouseleave="pauseVideo('transitions')">
+        <video id="transitions" class="product-video" muted loop playsinline>
+          <source src="assets/videos/transitions.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <h3>Переходы</h3>
+      </div>
+
+      <!-- Тройники -->
+      <div class="product-card" onmouseenter="playVideo('tees')" onmouseleave="pauseVideo('tees')">
+        <video id="tees" class="product-video" muted loop playsinline>
+          <source src="assets/videos/tees.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <h3>Тройники</h3>
+      </div>
+
+      <!-- Фланцы -->
+      <div class="product-card" onmouseenter="playVideo('flanges')" onmouseleave="pauseVideo('flanges')">
+        <video id="flanges" class="product-video" muted loop playsinline>
+          <source src="assets/videos/flanges.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <h3>Фланцы</h3>
+      </div>
+
+      <!-- Трубы -->
+      <div class="product-card" onmouseenter="playVideo('pipes')" onmouseleave="pauseVideo('pipes')">
+        <video id="pipes" class="product-video" muted loop playsinline>
+          <source src="assets/videos/pipes.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <h3>Трубы</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <footer class="footer">
     <div class="container">
