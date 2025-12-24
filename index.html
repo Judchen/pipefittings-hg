@@ -139,6 +139,11 @@
       color: #003366;
       text-align: center;
     }
+    .product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
       /* ABOUT */
   .about {
     padding: 80px 0;
@@ -402,13 +407,15 @@
       </div>
 
          <!-- Отводы -->
-      <div class="product-card" onmouseenter="playVideo('elbows')" onmouseleave="pauseVideo('elbows')">
-        <video id="elbows" class="product-video" muted loop playsinline>
-          <source src="assets/videos/elbows.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Отводы</h3>
-      </div>
+      <a href="products/elbows/" class="product-card-link">
+  <div class="product-card">
+    <video class="product-video" muted playsinline>
+      <source src="assets/videos/elbows.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <h3>Отводы</h3>
+  </div>
+</a>
 
       <!-- Переходы -->
       <div class="product-card" onmouseenter="playVideo('transitions')" onmouseleave="pauseVideo('transitions')">
