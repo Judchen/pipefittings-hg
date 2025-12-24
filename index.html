@@ -397,14 +397,18 @@
   <div class="container">
     <h2>Продукция</h2>
     <div class="product-grid">
+      
       <!-- Велдолеты -->
-          <div class="product-card" onmouseenter="playVideo('veldollets')" onmouseleave="pauseVideo('veldollets')">
-        <video id="veldollets" class="product-video" muted loop playsinline>
-          <source src="assets/videos/veldollets.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Велдолеты</h3>
-      </div>
+        <div class="product-card"
+             onmouseenter="playVideo('veldollets')"
+             onmouseleave="pauseVideo('veldollets')"
+             onclick="goToPage('products/veldollets/')">
+          <video id="veldollets" class="product-video" muted playsinline>
+            <source src="assets/videos/veldollets.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <h3>Велдолеты</h3>
+        </div>
 
          <!-- Отводы -->
       <div class="product-card"
@@ -419,49 +423,64 @@
 </div>
 
       <!-- Переходы -->
-      <div class="product-card" onmouseenter="playVideo('transitions')" onmouseleave="pauseVideo('transitions')">
-        <video id="transitions" class="product-video" muted loop playsinline>
-          <source src="assets/videos/transitions.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Переходы</h3>
-      </div>
+        <div class="product-card"
+             onmouseenter="playVideo('transitions')"
+             onmouseleave="pauseVideo('transitions')"
+             onclick="goToPage('products/transitions/')">
+          <video id="transitions" class="product-video" muted playsinline>
+            <source src="assets/videos/transitions.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <h3>Переходы</h3>
+        </div>
 
-      <!-- Тройники -->
-      <div class="product-card" onmouseenter="playVideo('tees')" onmouseleave="pauseVideo('tees')">
-        <video id="tees" class="product-video" muted loop playsinline>
-          <source src="assets/videos/tees.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Тройники</h3>
-      </div>
+     <!-- Тройники -->
+        <div class="product-card"
+             onmouseenter="playVideo('tees')"
+             onmouseleave="pauseVideo('tees')"
+             onclick="goToPage('products/tees/')">
+          <video id="tees" class="product-video" muted playsinline>
+            <source src="assets/videos/tees.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <h3>Тройники</h3>
+        </div>
 
-      <!-- Фланцы -->
-      <div class="product-card" onmouseenter="playVideo('flanges')" onmouseleave="pauseVideo('flanges')">
-        <video id="flanges" class="product-video" muted loop playsinline>
-          <source src="assets/videos/flanges.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Фланцы</h3>
-      </div>
-
-      <!-- Трубы -->
-      <div class="product-card" onmouseenter="playVideo('pipes')" onmouseleave="pauseVideo('pipes')">
-        <video id="pipes" class="product-video" muted loop playsinline>
-          <source src="assets/videos/pipes.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Трубы</h3>
-      </div>
+     <!-- Фланцы -->
+        <div class="product-card"
+             onmouseenter="playVideo('flanges')"
+             onmouseleave="pauseVideo('flanges')"
+             onclick="goToPage('products/flanges/')">
+          <video id="flanges" class="product-video" muted playsinline>
+            <source src="assets/videos/flanges.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <h3>Фланцы</h3>
+        </div>
       
-      <!-- Компексатор -->
-      <div class="product-card" onmouseenter="playVideo('kompensatorov')" onmouseleave="pauseVideo('kompensatorov')">
-        <video id="kompensatorov" class="product-video" muted loop playsinline>
-          <source src="assets/videos/kompensatorov.mp4" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-        <h3>Компексатор</h3>
-      </div>
+      <!-- Трубы -->
+        <div class="product-card"
+             onmouseenter="playVideo('pipes')"
+             onmouseleave="pauseVideo('pipes')"
+             onclick="goToPage('products/pipes/')">
+          <video id="pipes" class="product-video" muted playsinline>
+            <source src="assets/videos/pipes.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <h3>Трубы</h3>
+        </div>
+
+      <!-- Компенсаторы -->
+        <div class="product-card"
+             onmouseenter="playVideo('compensators')"
+             onmouseleave="pauseVideo('compensators')"
+             onclick="goToPage('products/compensators/')">
+          <video id="compensators" class="product-video" muted playsinline>
+            <source src="assets/videos/kompensatorov.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <h3>Компенсаторы</h3>
+        </div>
 
     </div>
   </div>
