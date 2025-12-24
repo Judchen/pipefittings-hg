@@ -283,6 +283,47 @@
       r: 5;
     }
   }
+      /* QUICK NAVIGATION */
+  .quick-nav {
+    background: #f0f8ff;
+    padding: 12px 0;
+    border-bottom: 1px solid #d0e8ff;
+    position: relative;
+    z-index: 5;
+  }
+  .quick-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .quick-nav a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .quick-nav a:hover {
+    background: #00a8ff;
+    color: white;
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    .quick-nav ul {
+      gap: 10px;
+    }
+    .quick-nav a {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
     /* FOOTER */
     .footer {
       text-align: center;
@@ -323,6 +364,17 @@
       <div class="tagline">Высокотехнологичные решения для ответственных трубопроводных систем</div>
     </div>
   </header>
+    <!-- NAVIGATION MENU -->
+  <nav class="quick-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#about">О компании CorroTech</a></li>
+        <li><a href="#clients">Заказчикам</a></li>
+        <li><a href="#manufacturers">Наши производители</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- HERO VIDEO -->
   <section class="hero">
