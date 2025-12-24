@@ -407,15 +407,16 @@
       </div>
 
          <!-- Отводы -->
-      <a href="products/elbows/" class="product-card-link">
-  <div class="product-card">
-    <video class="product-video" muted playsinline>
-      <source src="assets/videos/elbows.mp4" type="video/mp4">
-      Ваш браузер не поддерживает видео.
-    </video>
-    <h3>Отводы</h3>
-  </div>
-</a>
+      <div class="product-card"
+     onmouseenter="playVideo('elbows')"
+     onmouseleave="pauseVideo('elbows')"
+     onclick="goToPage('products/elbows/')">
+  <video id="elbows" class="product-video" muted playsinline>
+    <source src="assets/videos/elbows.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+  <h3>Отводы</h3>
+</div>
 
       <!-- Переходы -->
       <div class="product-card" onmouseenter="playVideo('transitions')" onmouseleave="pauseVideo('transitions')">
@@ -564,39 +565,43 @@
   </footer>
 
  <script>
-function playVideo(id) {
-  const video = document.getElementById(id);
-  if (video) {
-    // Останавливаем все остальные видео
-    document.querySelectorAll('video').forEach(v => {
-      if (v !== video) v.pause();
-    });
-    // Запускаем текущее
-    video.play().catch(e => {
-      console.warn("Автовоспроизведение заблокировано:", e);
-    });
-  }
-}
-
-function pauseVideo(id) {
-  const video = document.getElementById(id);
-  if (video) {
-    video.pause();
-  }
-}
-
-// Поддержка мобильных: при касании — проигрывать
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.product-card').forEach(card => {
-    const videoId = card.querySelector('video')?.id;
-    if (videoId) {
-      card.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        playVideo(videoId);
+  function playVideo(id) {
+    const video = document.getElementById(id);
+    if (video) {
+      // Остановить все остальные видео
+      document.querySelectorAll('video').forEach(v => {
+        if (v !== video) v.pause();
       });
+      video.play().catch(e => console.warn("Автовоспроизведение:", e));
     }
+  }
+
+  function pauseVideo(id) {
+    const video = document.getElementById(id);
+    if (video) {
+      video.pause();
+    }
+  }
+
+  function goToPage(url) {
+    // Остановить все видео перед переходом
+    document.querySelectorAll('video').forEach(v => v.pause());
+    // Перейти по ссылке
+    window.location.href = url;
+  }
+
+  // Поддержка мобильных: касание = переход
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('touchstart', (e) => {
+        const url = card.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+        if (url) {
+          e.preventDefault();
+          goToPage(url);
+        }
+      });
+    });
   });
-});
 </script>
 </body>
 </html>
