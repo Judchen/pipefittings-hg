@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакты | CorroTech</title>
+  <meta name="description" content="Свяжитесь с CorroTech — поставщиком трубопроводных деталей из нержавеющей стали и титана для НПЗ России.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: white;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
 
+    /* HEADER */
+    .header {
+      background: rgba(26, 26, 26, 0.85); /* Полупрозрачный фон */
+      padding: 20px 0;
+      position: relative;
+      z-index: 10;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: white;
+    }
+    .logo img {
+      height: 80px;
+      object-fit: contain;
+    }
+    .tagline {
+      color: #aaa;
+    }
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #00a8ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO VIDEO BACKGROUND */
+    .hero-bg {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-bg video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Прозрачный чёрный оверлей */
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    .hero-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+    }
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    /* CONTACTS FORM OVER VIDEO */
+    .contacts-box {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(4px);
+    }
+    .contacts-box h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .contact-item {
+      margin-bottom: 12px;
+      text-align: left;
+    }
+    .contact-item strong {
+      color: #003366;
+    }
+    .contact-item a {
+      color: #00a8ff;
+      text-decoration: none;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+    form button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+    form button:hover {
+      background: #002244;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(26, 26, 26, 0.9);
+      color: #aaa;
+      font-size: 14px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      .hero-content p {
+        font-size: 16px;
+      }
+      .header-content {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- VIDEO BACKGROUND -->
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline>
+      <source src="assets/videos/hongkong-bg.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>CorroTech Fittings Ltd</h1>
+      <p>Международная компания, зарегистрированная в Гонконге. Поставляем дефицитные трубопроводные детали напрямую с китайских заводов.</p>
+
+      <div class="contacts-box">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+          <div>
+            <h2>Контактная информация</h2>
+            <div class="contact-item">
+              <strong>Юридический адрес:</strong><br>
+              Central Plaza, 88 Queensway, Admiralty, Hong Kong
+            </div>
+            <div class="contact-item">
+              <strong>Email:</strong><br>
+              <a href="mailto:sales@corrotech.ru">sales@corrotech.ru</a>
+            </div>
+            <div class="contact-item">
+              <strong>WhatsApp:</strong><br>
+              +852 XXXX XXXX
+            </div>
+          </div>
+
+          <div>
+            <h2>Напишите нам</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <input type="text" name="name" placeholder="Ваше имя *" required>
+              <input type="email" name="email" placeholder="Email *" required>
+              <textarea name="message" placeholder="Сообщение *" rows="3" required></textarea>
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+
+        <div style="margin-top: 25px; text-align: center;">
+          <a href="index.html" class="back-link">← Вернуться на главную</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 CorroTech. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
