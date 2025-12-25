@@ -3,57 +3,298 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Велдолеты | CorroTech</title>
+  <title>Велдолеты из нержавеющей стали и титана | CorroTech</title>
+  <meta name="description" content="Велдолеты (weldolets) под сварку из нержавеющей стали 12Х18Н10Т и титана Grade 2. Соответствие MSS SP-97, ГОСТ 33256-2015. Прямые поставки с китайских заводов для НПЗ и химпрома.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
-    .container { width: 90%; max-width: 900px; margin: 0 auto; padding: 40px 0; }
-    h1 { color: #003366; margin-bottom: 30px; }
-    .video-container { margin: 30px 0; text-align: center; }
-    video { max-width: 100%; height: auto; border-radius: 8px; }
-    table { width: 100%; border-collapse: collapse; margin: 25px 0; }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-    th { background: #f0f8ff; }
-    .back-link {
-      display: inline-block;
-      margin-top: 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: white;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    /* HEADER */
+    .header {
+      background: white;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo img {
+      height: 80px;
+      object-fit: contain;
+    }
+    .breadcrumbs {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    .breadcrumbs a {
       color: #00a8ff;
       text-decoration: none;
     }
-    .back-link:hover { text-decoration: underline; }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    /* MAIN */
+    .product-page {
+      padding: 60px 0;
+    }
+    .product-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .product-header h1 {
+      font-size: 32px;
+      color: #003366;
+      margin-bottom: 15px;
+    }
+    .product-header p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    .product-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      .product-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .media-block {
+      text-align: center;
+    }
+    .media-block video,
+    .media-block img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-block h2 {
+      color: #003366;
+      margin: 25px 0 15px;
+      font-size: 22px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background: #f0f8ff;
+      color: #003366;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+
+    .docs-section {
+      background: #f9fbfd;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    .docs-section h2 {
+      margin-top: 0;
+    }
+    .doc-link {
+      display: inline-block;
+      margin: 8px 10px 8px 0;
+      padding: 8px 16px;
+      background: #00a8ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    .doc-link:hover {
+      background: #0088cc;
+    }
+
+    .request-section {
+      background: #e6f2ff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .request-section h2 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+    }
+    form button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+    form button:hover {
+      background: #002244;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="../" class="back-link">← Назад к каталогу</a>
-    <h1>Велдолеты из нержавеющей стали и титана</h1>
-    
-    <div class="video-container">
-      <video controls>
-        <source src="../../assets/videos/veldollets.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../../assets/img/logo.png" alt="CorroTech">
+      </div>
+      <div class="breadcrumbs">
+        <a href="../../index.html">Главная</a> → 
+        <a href="../../products/">Продукция</a> → 
+        Велдолеты
+      </div>
     </div>
+  </header>
 
-    <p>Велдолеты (weldolets) — фитинги для присоединения ответвлений под углом 90° к основному трубопроводу. Применяются на ответственных участках НПЗ, где требуется высокая прочность сварного соединения.</p>
+  <!-- CONTENT -->
+  <main class="product-page">
+    <div class="container">
+      <div class="product-header">
+        <h1>Велдолеты из нержавеющей стали и титана</h1>
+        <p>Фитинги для присоединения ответвлений под 90° — для высоконагруженных участков на НПЗ и в нефтехимии</p>
+      </div>
 
-    <h2>Соответствие стандартам</h2>
-    <table>
-      <tr><th>Стандарт</th><th>Обозначение</th><th>Материалы</th></tr>
-      <tr><td>ASME</td><td>MSS SP-97</td><td>316L, 321, Titanium Gr.2</td></tr>
-      <tr><td>ГОСТ</td><td>33256-2015</td><td>12Х18Н10Т, 08Х17Н13М2Т</td></tr>
-    </table>
+      <div class="product-content">
+        <div class="media-block">
+          <video controls poster="../../assets/img/veldollets-poster.jpg">
+            <source src="../../assets/videos/veldollets.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
 
-    <h2>Технические параметры</h2>
-    <ul>
-      <li>Диаметр основного трубопровода: DN15 – DN1200</li>
-      <li>Диаметр ответвления: DN10 – DN500</li>
-      <li>Давление: до PN160</li>
-      <li>Температура: от -196°C до +700°C</li>
-    </ul>
+        <div class="info-block">
+          <h2>Применение</h2>
+          <p>Велдолеты используются для надёжного присоединения ответвлений к основному трубопроводу в системах с высоким давлением, вибрацией и температурными циклами: установки гидроочистки, компрессорные станции, линии подачи реагентов.</p>
 
-    <p><a href="../../#contacts">Свяжитесь с нами</a> для запроса чертежей, расчёта или коммерческого предложения.</p>
-  </div>
+          <h2>Технические характеристики</h2>
+          <ul>
+            <li><strong>Угол присоединения:</strong> 90°</li>
+            <li><strong>Тип соединения:</strong> под сварку (BW)</li>
+            <li><strong>Основной диаметр (Run):</strong> DN15 — DN1200</li>
+            <li><strong>Диаметр ответвления (Branch):</strong> DN10 — DN500</li>
+            <li><strong>Давление:</strong> до PN160 (Class 2500)</li>
+            <li><strong>Температура:</strong> от –196°C до +700°C</li>
+            <li><strong>Материалы:</strong> 12Х18Н10Т, 08Х17Н13М2Т, AISI 316L, Titanium Grade 2</li>
+          </ul>
+
+          <h2>Соответствие стандартам</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Стандарт</th>
+                <th>Обозначение</th>
+                <th>Материалы</th>
+                <th>Примечание</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🇺🇸 ASME</td>
+                <td>MSS SP-97</td>
+                <td>316L, Ti Gr.2</td>
+                <td>Международный стандарт для велдолетов</td>
+              </tr>
+              <tr>
+                <td>🇷🇺 ГОСТ</td>
+                <td>33256-2015</td>
+                <td>12Х18Н10Т, 08Х17Н13М2Т</td>
+                <td>Российский аналог MSS SP-97</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ДОКУМЕНТАЦИЯ -->
+      <div class="docs-section">
+        <h2>Техническая документация</h2>
+        <a href="../../assets/pdf/chertezhi/veldollet_dn50.pdf" target="_blank" class="doc-link">Чертёж DN50</a>
+        <a href="../../assets/pdf/gost/gost_33256.pdf" target="_blank" class="doc-link">ГОСТ 33256-2015</a>
+        <a href="../../assets/pdf/raschety/metodika_rascheta_silfonnyh_kompensatorov.pdf" target="_blank" class="doc-link">Методика расчёта</a>
+      </div>
+
+      <!-- ЗАПРОС -->
+      <div class="request-section">
+        <h2>Нужен велдолет под ваш проект?</h2>
+        <p>Укажите диаметры основной и ответвительной линии, материал и стандарт — подготовим КП за 24 часа.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Ваше имя *" required>
+          <input type="email" name="email" placeholder="Email *" required>
+          <textarea name="message" placeholder="Укажите: DN Run, DN Branch, материал, стандарт, количество"></textarea>
+          <button type="submit">Получить КП</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 CorroTech. Website: <a href="https://pipefittings-hg.ru" style="color:#aaa;">pipefittings-hg.ru</a></p>
+    </div>
+  </footer>
+
 </body>
 </html>
