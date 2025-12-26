@@ -29,59 +29,53 @@
       background: white;
       padding: 20px 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 10;
     }
     .header-content {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
     }
     .logo img {
-      height: 120px; /* Увеличили на 0.5 раза */
+      height: 100px;
       object-fit: contain;
     }
     .tagline {
       font-size: 16px;
       color: #003366;
       max-width: 500px;
+      line-height: 1.4;
     }
-    /* QR CODE HOVER EFFECT */
+    
+    /* QR CODE */
     .header-qr {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin-left: auto;
-    }
-
-    .header-qr img {
+      gap: 4px;
+      flex-shrink: 0;
       width: 60px;
-      height: 60px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      object-fit: cover;
-      transition: transform 0.3s ease;
     }
-
+    .header-qr img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+      transition: transform 0.25s ease;
+      display: block;
+    }
     .header-qr img:hover {
-      transform: scale(1.1);
+      transform: scale(1.12);
     }
-
     .qr-label {
-      font-size: 12px;
+      font-size: 11px;
       color: #003366;
       font-weight: 600;
-      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
     }
 
-    /* Скрыть на мобильных */
-    @media (max-width: 768px) {
-      .header-qr {
-        display: none;
-      }
-    }
     /* HERO VIDEO */
     .hero {
       position: relative;
@@ -119,31 +113,18 @@
       margin-bottom: 20px;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
-    .hero a {
-      background: #00a8ff;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 20px;
-      transition: background 0.3s;
-    }
-    .hero a:hover {
-      background: #0088cc;
-    }
 
     /* PRODUCTS */
     .products {
-  padding: 80px 0;
-  background: white;
-}
-.products h2 {
-  text-align: center; /* ← Центрируем заголовок */
-  margin-bottom: 40px;
-  font-size: 28px;
-  color: #003366;
-}
+      padding: 80px 0;
+      background: white;
+    }
+    .products h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #003366;
+    }
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -174,196 +155,173 @@
       color: #003366;
       text-align: center;
     }
-    .product-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-      /* ABOUT */
-  .about {
-    padding: 80px 0;
-    background: #f9fbfd;
-    border-top: 1px solid #eee;
-  }
-  .about h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 28px;
-    color: #003366;
-  }
-  .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #222;
-  }
-  .about-content p {
-    margin-bottom: 20px;
-  }
-  .about-content strong {
-    color: #003366;
-  }
-      /* CLIENTS */
-  .clients {
-    padding: 80px 0;
-    background: white;
-    border-top: 1px solid #eee;
-  }
-  .clients h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #003366;
-  }
-  .clients-content {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #222;
-  }
-  .clients-content p {
-    margin-bottom: 16px;
-  }
-  .clients-content ul {
-    margin: 20px 0 25px;
-    padding-left: 20px;
-  }
-  .clients-content li {
-    margin-bottom: 10px;
-    list-style-type: none;
-    position: relative;
-  }
-  .clients-content li:before {
-    content: "•";
-    color: #00a8ff;
-    font-weight: bold;
-    position: absolute;
-    left: -15px;
-  }
-  .cta {
-    font-weight: 600;
-    margin: 25px 0;
-    padding: 15px;
-    background: #f0f8ff;
-    border-left: 4px solid #00a8ff;
-    border-radius: 0 4px 4px 0;
-  }
-  .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #003366;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: background 0.3s;
-    text-align: center;
-  }
-  .btn:hover {
-    background: #002244;
-  }
-      /* MANUFACTURERS */
-  .manufacturers {
-    padding: 80px 0;
-    background: #f9fbfd;
-    border-top: 1px solid #eee;
-  }
-  .manufacturers h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #003366;
-  }
-  .manufacturers-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .map-container {
-    margin: 30px 0;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .china-map {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .factories {
-    margin-top: 30px;
-  }
-  .factory {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border-left: 4px solid #00a8ff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  }
-  .factory h3 {
-    color: #003366;
-    margin-bottom: 8px;
-    font-size: 18px;
-  }
-  .factory p {
-    margin: 0;
-    color: #333;
-    font-size: 15px;
-  }
 
-  /* Адаптивность карты */
-  @media (max-width: 600px) {
-    .china-map text {
-      font-size: 12px;
+    /* ABOUT */
+    .about {
+      padding: 80px 0;
+      background: #f9fbfd;
+      border-top: 1px solid #eee;
     }
-    .china-map circle {
-      r: 5;
+    .about h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #003366;
     }
-  }
-      /* QUICK NAVIGATION */
-  .quick-nav {
-    background: #f0f8ff;
-    padding: 12px 0;
-    border-bottom: 1px solid #d0e8ff;
-    position: relative;
-    z-index: 5;
-  }
-  .quick-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .quick-nav a {
-    color: #003366;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s;
-    white-space: nowrap;
-  }
-  .quick-nav a:hover {
-    background: #00a8ff;
-    color: white;
-  }
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #222;
+    }
+    .about-content p {
+      margin-bottom: 20px;
+    }
+    .about-content strong {
+      color: #003366;
+    }
 
-  /* Mobile */
-  @media (max-width: 600px) {
+    /* CLIENTS */
+    .clients {
+      padding: 80px 0;
+      background: white;
+      border-top: 1px solid #eee;
+    }
+    .clients h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #003366;
+    }
+    .clients-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #222;
+    }
+    .clients-content p {
+      margin-bottom: 16px;
+    }
+    .clients-content ul {
+      margin: 20px 0 25px;
+      padding-left: 20px;
+    }
+    .clients-content li {
+      margin-bottom: 10px;
+      list-style-type: none;
+      position: relative;
+    }
+    .clients-content li:before {
+      content: "•";
+      color: #00a8ff;
+      font-weight: bold;
+      position: absolute;
+      left: -15px;
+    }
+    .cta {
+      font-weight: 600;
+      margin: 25px 0;
+      padding: 15px;
+      background: #f0f8ff;
+      border-left: 4px solid #00a8ff;
+      border-radius: 0 4px 4px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+      text-align: center;
+    }
+    .btn:hover {
+      background: #002244;
+    }
+
+    /* MANUFACTURERS */
+    .manufacturers {
+      padding: 80px 0;
+      background: #f9fbfd;
+      border-top: 1px solid #eee;
+    }
+    .manufacturers h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #003366;
+    }
+    .manufacturers-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .map-container {
+      margin: 30px 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .china-map {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .factories {
+      margin-top: 30px;
+    }
+    .factory {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border-left: 4px solid #00a8ff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .factory h3 {
+      color: #003366;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    .factory p {
+      margin: 0;
+      color: #333;
+      font-size: 15px;
+    }
+
+    /* QUICK NAVIGATION */
+    .quick-nav {
+      background: #f0f8ff;
+      padding: 12px 0;
+      border-bottom: 1px solid #d0e8ff;
+    }
     .quick-nav ul {
-      gap: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
     .quick-nav a {
-      font-size: 14px;
-      padding: 6px 12px;
+      color: #003366;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s;
+      white-space: nowrap;
     }
-  }
+    .quick-nav a:hover {
+      background: #00a8ff;
+      color: white;
+    }
+
     /* FOOTER */
     .footer {
       text-align: center;
@@ -377,10 +335,21 @@
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
+        align-items: flex-start;
         gap: 15px;
+      }
+      .header-qr {
+        display: none !important;
       }
       .product-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+      .quick-nav ul {
+        gap: 10px;
+      }
+      .quick-nav a {
+        font-size: 14px;
+        padding: 6px 12px;
       }
     }
     @media (max-width: 480px) {
@@ -396,20 +365,25 @@
 <body>
 
   <!-- HEADER -->
-  <div class="header-content">
-  <div class="logo">
-    <img src="assets/img/logo.png" alt="CorroTech">
-  </div>
-  <div class="tagline">
-    <strong>Высокотехнологичные решения для ответственных трубопроводных систем</strong><br>
-  </div>
-  <div class="header-qr">
-  <img src="assets/img/qr-max.png" alt="Связаться через MAX">
-  <div class="qr-label">MAX</div>
-</div>
-</div>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="CorroTech">
+      </div>
+      <div class="tagline">
+        <strong>Вы выиграли тендер — мы закроем поставку.</strong><br>
+        Даже если российские заводы отказали.
+      </div>
+      <div class="header-qr">
+        <a href="https://t.me/vash_username" target="_blank" title="Написать в MAX (Telegram)">
+          <img src="assets/img/qr-max.png" alt="Связаться через MAX">
+        </a>
+        <div class="qr-label">MAX</div>
+      </div>
+    </div>
   </header>
-    <!-- NAVIGATION MENU -->
+
+  <!-- NAVIGATION MENU -->
   <nav class="quick-nav">
     <div class="container">
       <ul>
@@ -432,98 +406,90 @@
   </section>
 
   <!-- PRODUCTS -->
-<section id="products" class="products">
-  <div class="container">
-    <h2>«Наша специализация»</h2>
-    <div class="product-grid">
-      
-      <!-- Велдолеты -->
-        <div class="product-card"
-             onmouseenter="playVideo('veldollets')"
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Наша специализация</h2>
+      <div class="product-grid">
+        <!-- Велдолеты -->
+        <div class="product-card" 
+             onmouseenter="playVideo('veldollets')" 
              onmouseleave="pauseVideo('veldollets')"
              onclick="goToPage('products/veldollets/')">
           <video id="veldollets" class="product-video" muted playsinline>
             <source src="assets/videos/veldollets.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
           </video>
           <h3>Велдолеты</h3>
         </div>
 
-         <!-- Отводы -->
-      <div class="product-card"
-     onmouseenter="playVideo('elbows')"
-     onmouseleave="pauseVideo('elbows')"
-     onclick="goToPage('products/elbows/')">
-  <video id="elbows" class="product-video" muted playsinline>
-    <source src="assets/videos/elbows.mp4" type="video/mp4">
-    Ваш браузер не поддерживает видео.
-  </video>
-  <h3>Отводы</h3>
-</div>
+        <!-- Отводы -->
+        <div class="product-card" 
+             onmouseenter="playVideo('elbows')" 
+             onmouseleave="pauseVideo('elbows')"
+             onclick="goToPage('products/elbows/')">
+          <video id="elbows" class="product-video" muted playsinline>
+            <source src="assets/videos/elbows.mp4" type="video/mp4">
+          </video>
+          <h3>Отводы</h3>
+        </div>
 
-      <!-- Переходы -->
-        <div class="product-card"
-             onmouseenter="playVideo('transitions')"
+        <!-- Переходы -->
+        <div class="product-card" 
+             onmouseenter="playVideo('transitions')" 
              onmouseleave="pauseVideo('transitions')"
              onclick="goToPage('products/transitions/')">
           <video id="transitions" class="product-video" muted playsinline>
             <source src="assets/videos/transitions.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
           </video>
           <h3>Переходы</h3>
         </div>
 
-     <!-- Тройники -->
-        <div class="product-card"
-             onmouseenter="playVideo('tees')"
+        <!-- Тройники -->
+        <div class="product-card" 
+             onmouseenter="playVideo('tees')" 
              onmouseleave="pauseVideo('tees')"
              onclick="goToPage('products/tees/')">
           <video id="tees" class="product-video" muted playsinline>
             <source src="assets/videos/tees.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
           </video>
           <h3>Тройники</h3>
         </div>
 
-     <!-- Фланцы -->
-        <div class="product-card"
-             onmouseenter="playVideo('flanges')"
+        <!-- Фланцы -->
+        <div class="product-card" 
+             onmouseenter="playVideo('flanges')" 
              onmouseleave="pauseVideo('flanges')"
              onclick="goToPage('products/flanges/')">
           <video id="flanges" class="product-video" muted playsinline>
             <source src="assets/videos/flanges.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
           </video>
           <h3>Фланцы</h3>
         </div>
-      
-      <!-- Трубы -->
-        <div class="product-card"
-             onmouseenter="playVideo('pipes')"
+
+        <!-- Трубы -->
+        <div class="product-card" 
+             onmouseenter="playVideo('pipes')" 
              onmouseleave="pauseVideo('pipes')"
              onclick="goToPage('products/pipes/')">
           <video id="pipes" class="product-video" muted playsinline>
             <source src="assets/videos/pipes.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
           </video>
           <h3>Трубы</h3>
         </div>
 
-      <!-- Компенсаторы -->
-        <div class="product-card"
-             onmouseenter="playVideo('compensators')"
-             onmouseleave="pauseVideo('compensators')"
-             onclick="goToPage('products/compensators/')">
-          <video id="compensators" class="product-video" muted playsinline>
+        <!-- Компенсаторы -->
+        <div class="product-card" 
+             onmouseenter="playVideo('kompensatorov')" 
+             onmouseleave="pauseVideo('kompensatorov')"
+             onclick="goToPage('products/kompensatorov/')">
+          <video id="kompensatorov" class="product-video" muted playsinline>
             <source src="assets/videos/kompensatorov.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
           </video>
           <h3>Компенсаторы</h3>
         </div>
-
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- О КОМПАНИИ -->
   <section class="about" id="about">
     <div class="container">
@@ -540,15 +506,18 @@
           продукцию, которая <strong>не производится в РФ</strong> или выпускается в недостаточном объёме.
         </p>
         <p>
-         Основной материал — <strong>титан</strong> (Grade 2, Grade 5) и <strong>нержавеющая сталь</strong> 
+          Наша экспертиза — <strong>титан</strong> (Grade 2, Grade 5) и <strong>нержавеющая сталь</strong> 
           (12Х18Н10Т, 08Х17Н13М2Т, AISI 316L) для работы в агрессивных средах: 
           сероводород, высокие температуры, хлориды.
         </p>
         <p>
-          Каждая партия сопровождается необходимой документацией: 
-        «Мы не производим фитинги — мы закрываем ваши обязательства по поставкам:
-сроки, стандарты, качество, документы, логистика и риски».
-ASME B16.9</strong>, <strong>EN 10253</strong>, <strong>ISO 3419</strong> и <strong>ГОСТ</strong>.
+          Каждая партия сопровождается паспортом качества, результатами гидроиспытаний и 
+          подтверждением соответствия заявленным стандартам: 
+          <strong>ГОСТ</strong>, <strong>ASME B16.9</strong>, <strong>EN 10253</strong>, <strong>ISO 3419</strong>.
+        </p>
+        <p>
+          <strong>«Мы не производим фитинги — мы закрываем ваши обязательства по поставкам: 
+          сроки, стандарты, качество, документы, логистика и риски».</strong>
         </p>
         <p>
           Мы не просто поставщик — мы <strong>технический партнёр</strong>, готовый подобрать 
@@ -557,34 +526,37 @@ ASME B16.9</strong>, <strong>EN 10253</strong>, <strong>ISO 3419</strong> и <st
       </div>
     </div>
   </section>
-    <!-- ЗАКАЗЧИКАМ -->
+
+  <!-- ЗАКАЗЧИКАМ -->
   <section class="clients" id="clients">
     <div class="container">
-      <h2>Заказчикам</h2>
+      <h2>Вы выиграли тендер — но не можете закрыть поставку?</h2>
       <div class="clients-content">
         <p>
-          «Мы не производим фитинги — мы закрываем ваши обязательства по поставкам:
-               сроки, стандарты, качество, документы, логистика и риски».
+          Российские заводы не производят нужный типоразмер? Срывают сроки? Не дают паспорта по ГОСТ?  
+          Или вовсе отказались от заказа за неделю до отгрузки?
         </p>
         <p>
-          <strong>CorroTech поставка продукции под ваш проект — даже если она уникальна.</strong>
+          <strong>Это не ваша вина — но риски несёте вы.</strong>  
+          Один сорванный контракт — и вы в чёрном списке НПЗ на годы.
         </p>
         <ul>
-          <li>✅ Возможность изготовления по вашим чертежам и техническим заданиям</li>
-          <li>✅ Поставляем продукцию из титана Grade 2/5, нержавеющей стали 12Х18Н10Т, 316L, Inconel</li>
-          <li>✅ Сроки — от <strong>15 рабочих дней</strong> после согласования</li>
-          <li>✅ Предоставляем расчёт и всю необходимую документацию</li>
-          <li>✅ Поставка «под ключ»: от завода — до вашего склада</li>
+          <li>✅ <strong>Дефицит?</strong> Поставим то, чего нет в РФ: титановые компенсаторы, велдолеты DN>300</li>
+          <li>✅ <strong>Срыв сроков?</strong> Готовы к срочным заказам — от 15 рабочих дней</li>
+          <li>✅ <strong>Нет документов?</strong> Предоставим паспорта по ГОСТ, протоколы испытаний, химанализ</li>
+          <li>✅ <strong>Боязно работать с Китаем?</strong> Мы — ваш технический представитель: контроль, приёмка, логистика</li>
+          <li>✅ <strong>Риски?</strong> Берём их на себя. Ваш статус выигравшего поставщика остаётся неизменным</li>
         </ul>
         <p class="cta">
-          Отправьте ТЗ — мы подготовим коммерческое предложение 
-          с расчётами и сроками в течение <strong>24 часов</strong>.
+          <strong>Ваш контракт — наша ответственность.</strong><br>
+          Отправьте спецификацию — подготовим КП и документы в течение <strong>24 часов</strong>.
         </p>
-        <a href="#contacts" class="btn">Отправить запрос</a>
+        <a href="contacts.html" class="btn">Отправить запрос</a>
       </div>
     </div>
   </section>
-    <!-- ПРОИЗВОДИТЕЛИ -->
+
+  <!-- ПРОИЗВОДИТЕЛИ -->
   <section class="manufacturers" id="manufacturers">
     <div class="container">
       <h2>Наши производители</h2>
@@ -596,9 +568,9 @@ ASME B16.9</strong>, <strong>EN 10253</strong>, <strong>ISO 3419</strong> и <st
           поставок на рынки ЕС, США и стран ЕАЭС.
         </p>
 
-       <div class="map-container">
-  <img src="assets/img/china-proizvoditeli.png" alt="Производители CorroTech в Китае" class="china-map">
-</div>
+        <div class="map-container">
+          <img src="assets/img/china-proizvoditeli.png" alt="Производители CorroTech в Китае" class="china-map">
+        </div>
 
         <div class="factories">
           <div class="factory">
@@ -617,50 +589,47 @@ ASME B16.9</strong>, <strong>EN 10253</strong>, <strong>ISO 3419</strong> и <st
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="container">
-      <p>© 2025 CorroTech. Website: pipefittings-hg.ru</p>
+      <p>© 2025 CorroTech. Website: <a href="https://pipefittings-hg.ru" style="color:#aaa;">pipefittings-hg.ru</a></p>
     </div>
   </footer>
 
- <script>
-  function playVideo(id) {
-    const video = document.getElementById(id);
-    if (video) {
-      // Остановить все остальные видео
-      document.querySelectorAll('video').forEach(v => {
-        if (v !== video) v.pause();
-      });
-      video.play().catch(e => console.warn("Автовоспроизведение:", e));
+  <script>
+    function playVideo(id) {
+      const video = document.getElementById(id);
+      if (video) {
+        document.querySelectorAll('video').forEach(v => {
+          if (v !== video) v.pause();
+        });
+        video.play().catch(e => console.warn("Автовоспроизведение:", e));
+      }
     }
-  }
 
-  function pauseVideo(id) {
-    const video = document.getElementById(id);
-    if (video) {
-      video.pause();
+    function pauseVideo(id) {
+      const video = document.getElementById(id);
+      if (video) {
+        video.pause();
+      }
     }
-  }
 
-  function goToPage(url) {
-    // Остановить все видео перед переходом
-    document.querySelectorAll('video').forEach(v => v.pause());
-    // Перейти по ссылке
-    window.location.href = url;
-  }
+    function goToPage(url) {
+      document.querySelectorAll('video').forEach(v => v.pause());
+      window.location.href = url;
+    }
 
-  // Поддержка мобильных: касание = переход
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('touchstart', (e) => {
-        const url = card.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
-        if (url) {
-          e.preventDefault();
-          goToPage(url);
-        }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('touchstart', (e) => {
+          const url = card.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+          if (url) {
+            e.preventDefault();
+            goToPage(url);
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
