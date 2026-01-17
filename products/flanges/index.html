@@ -215,6 +215,40 @@
     form button:hover {
       background: #002244;
     }
+    .production-video-section {
+  margin: 50px 0;
+  padding: 30px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.production-video-section h2 {
+  color: #003366;
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.production-video-section p {
+  text-align: center;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 16px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
 
     /* FOOTER */
     .footer {
@@ -318,6 +352,18 @@
           </table>
         </div>
       </div>
+      <!-- ПРОИЗВОДСТВО ФЛАНЦЕВ -->
+<div class="production-video-section">
+  <h2>Производство фланцев</h2>
+  <p>Контроль качества на каждом этапе: от отливки заготовки до механической обработки, нанесения покрытия и проверки по ГОСТ и ASME.</p>
+  
+  <div class="video-container">
+    <video controls poster="../../assets/img/production-flanges-poster.jpg">
+      <source src="../../assets/videos/production-flanges.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+</div>
 
            <!-- ЗАПРОС -->
       <div class="request-section">
