@@ -24,7 +24,40 @@
       margin: 0 auto;
       padding: 20px 0;
     }
+.production-video-section {
+  margin: 50px 0;
+  padding: 30px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
 
+.production-video-section h2 {
+  color: #003366;
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.production-video-section p {
+  text-align: center;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 16px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
     /* HEADER */
     .header {
       background: white;
@@ -258,7 +291,7 @@
 
       <div class="product-content">
         <div class="media-block">
-          <video controls poster="../../assets/img/elbows-poster.jpg">
+          <video controls poster="../../assets/img/elbows-poster1.jpg">
             <source src="../../assets/videos/elbows.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
           </video>
@@ -317,7 +350,17 @@
           </table>
         </div>
       </div>
-
+<!-- ПРОИЗВОДСТВО отводов -->
+<div class="production-video-section">
+  <h2>Производство фланцев</h2>
+  <p> Этапы производства: от отливки заготовки до механической обработки.</p>
+  
+  <div class="video-container">
+    <video controls poster="../../assets/img/elbows-poster.jpg">
+      <source src="../../assets/videos/production-elbows.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
             <!-- ЗАПРОС -->
       <div class="request-section">
         <h2>Нужен отвод под ваш проект?</h2>
