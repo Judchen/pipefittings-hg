@@ -292,7 +292,37 @@
       color: #333;
       font-size: 15px;
     }
-
+.services-intro {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+.services-intro h2 {
+  color: #003366;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.services-intro p {
+  color: #555;
+  font-size: 17px;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+.btn-more {
+  display: inline-block;
+  background: #003366;
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+.btn-more:hover {
+  background: #002244;
+}
     /* QUICK NAVIGATION */
     .quick-nav {
       background: #f0f8ff;
@@ -388,8 +418,9 @@
     <ul>
       <li><a href="about/">О компании</a></li> <!-- теперь ведёт на /about/ -->
       <li><a href="#clients">Заказчикам</a></li>
+      <li><a href="services/">Наши услуги</a></li>
       <li><a href="#manufacturers">Наши производители</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
     </ul>
   </div>
 </nav>
@@ -403,7 +434,15 @@
       <h1>CorroTech — надёжность в каждой детали</h1>
     </div>
   </section>
-
+<!-- ИНЖЕНЕРНЫЕ УСЛУГИ -->
+<div class="services-intro">
+  <h2>Инженерные решения под ваш проект</h2>
+  <p>
+    CorroTech не только поставляет оборудование — мы участвуем в проектировании и техническом сопровождении объектов на НПЗ, в химической, фармацевтической, пищевой и морской промышленности.  
+    Благодаря партнёрству с дочерними строительными и монтажными компаниями обеспечиваем сквозное исполнение: от расчёта и подбора материалов до поставки и пусконаладки.
+  </p>
+  <a href="services/" class="btn-more">Подробнее об услугах</a>
+</div>
   <!-- PRODUCTS -->
   <section id="products" class="products">
     <div class="container">
