@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Наши услуги | CorroTech</title>
+  <meta name="description" content="Инженерные услуги CorroTech: проектирование, подбор оборудования, поставка и монтаж для НПЗ, химпрома, фармы и морской промышленности.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background: white; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+
+    /* HEADER */
+    .header {
+      background: white;
+      padding: 20px 0;
+      box-shadow: 0 2; 
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo img {
+      height: 140px;
+      object-fit: contain;
+    }
+    .breadcrumbs {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #666;
+    }
+    .breadcrumbs a {
+      color: #00a8ff;
+      text-decoration: none;
+      font-size: inherit;
+    }
+
+    /* QR CODE */
+    .header-qr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+      width: 80px;
+      min-width: 80px;
+      margin-left: auto;
+    }
+    .header-qr img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+      display: block;
+    }
+    .qr-label {
+      font-size: 11px;
+      color: #003366;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* MAIN */
+    .services-page {
+      padding: 60px 0;
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .services-header h1 {
+      font-size: 32px;
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    .services-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 17px;
+      color: #444;
+    }
+    .services-content p {
+      margin-bottom: 18px;
+    }
+    .services-content ul {
+      padding-left: 24px;
+      margin: 18px 0;
+    }
+    .services-content li {
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="CorroTech">
+      </div>
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a> → 
+        Наши услуги
+      </div>
+      <div class="header-qr">
+        <a href="https://max.ru/u/f9LHodD0cOISNRbh5hcmT_GZGE4Aaql5RGoBoVumrrifUU8skcr5Zsjugc8" target="_blank" title="Написать в MAX">
+          <img src="/assets/img/qr-max.png" alt="Связаться через MAX">
+        </a>
+        <div class="qr-label">MAX</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="services-page">
+    <div class="container">
+      <div class="services-header">
+        <h1>Наши услуги</h1>
+      </div>
+
+      <div class="services-content">
+        <p>
+          CorroTech оказывает комплексные инженерные услуги для промышленных объектов:
+        </p>
+        <ul>
+          <li><strong>Проектирование</strong> технологических участков трубопроводных систем под требования заказчика;</li>
+          <li><strong>Подбор материалов</strong> (титан, нержавеющая сталь, дуплекс, Inconel) для работы в агрессивных средах — сероводород, хлориды, кислоты;</li>
+          <li><strong>Адаптация решений</strong> под стандарты: ГОСТ, ASME, EN, ISO, EJMA;</li>
+          <li><strong>Техническое сопровождение поставок</strong> «под ключ» — от согласования чертежей до передачи готового решения.</li>
+        </ul>
+
+        <p>
+          Мы работаем с предприятиями <strong>нефтепереработки, химической, фармацевтической, пищевой и морской промышленности</strong>.
+        </p>
+
+        <p>
+          Благодаря партнёрству с дочерними строительными и монтажными компаниями обеспечиваем <strong>сквозное исполнение проектов</strong>:  
+          расчёт → поставка → монтаж → пусконаладка.
+        </p>
+
+        <p>
+          <strong>Ваш вызов — наша инженерная задача.</strong>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 CorroTech. Website: <a href="https://pipefittings-hg.ru">pipefittings-hg.ru</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
