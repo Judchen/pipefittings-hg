@@ -292,36 +292,45 @@
       color: #333;
       font-size: 15px;
     }
+/* ИНЖЕНЕРНЫЕ УСЛУГИ — обновлённый стиль */
 .services-intro {
   text-align: center;
-  margin-bottom: 50px;
-  padding: 0 10px;
+  margin: 80px auto 60px; /* ← отступ сверху 80px, снизу 60px */
+  padding: 0 15px;
+  max-width: 900px;
 }
+
 .services-intro h2 {
   color: #003366;
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 34px; /* ← увеличено с 28px */
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.3;
 }
+
 .services-intro p {
-  color: #555;
-  font-size: 17px;
-  max-width: 800px;
-  margin: 0 auto 25px;
+  color: #444;
+  font-size: 18px; /* ← чуть крупнее */
   line-height: 1.7;
+  margin-bottom: 30px;
 }
+
 .btn-more {
   display: inline-block;
   background: #003366;
   color: white;
   text-decoration: none;
-  padding: 10px 24px;
+  padding: 12px 32px;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 16px;
-  transition: background 0.3s;
+  font-size: 17px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 .btn-more:hover {
   background: #002244;
+  transform: translateY(-2px);
 }
     /* QUICK NAVIGATION */
     .quick-nav {
