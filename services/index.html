@@ -61,7 +61,21 @@
       font-weight: 600;
       white-space: nowrap;
     }
+/* HERO VIDEO */
+.hero-video {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  margin-bottom: 50px;
+}
 
+.hero-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 600px; /* ограничение по высоте на больших экранах */
+  object-fit: cover;
+}
     /* MAIN */
     .services-page {
       padding: 60px 0;
@@ -127,7 +141,13 @@
       </div>
     </div>
   </header>
-
+<!-- HERO VIDEO -->
+<div class="hero-video">
+  <video controls poster="../assets/img/services-poster.jpg">
+    <source src="../assets/videos/services.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+</div>
   <!-- CONTENT -->
   <main class="services-page">
     <div class="container">
