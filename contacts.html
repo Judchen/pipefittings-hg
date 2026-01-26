@@ -151,7 +151,16 @@
     form button:hover {
       background: #002244;
     }
-
+.contact-value {
+  color: #003366; /* или #555, #222 и т.д. */
+}
+.contact-value {
+  text-decoration: none;
+  color: #003366;
+}
+.contact-value:hover {
+  color: #002244;
+}
     /* FOOTER */
     .footer {
       text-align: center;
@@ -195,18 +204,18 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
           <div>
             <h2>Контактная информация</h2>
-            <div class="contact-item">
-              <strong>Юридический адрес:</strong><br>
-              THE CAPITAL, 61-65 CHATHAM ROAD SOUTH, Tsim Sha Tsui, Hong Kong.
-            </div>
-            <div class="contact-item">
-              <strong>Email:</strong><br>
-              <a href="mailto:itk.com.ltd@yandex.com">itk.com.ltd@yandex.com</a>
-            </div>
-            <div class="contact-item">
-              <strong>MAX:</strong><br>
-              +7 906 366 14 13
-            </div>
+           <div class="contact-item">
+  <strong>Юридический адрес:</strong><br>
+  <span class="contact-value">THE CAPITAL, 61-65 CHATHAM ROAD SOUTH, Tsim Sha Tsui, Hong Kong.</span>
+</div>
+<div class="contact-item">
+  <strong>Email:</strong><br>
+  <a href="mailto:itk.com.ltd@yandex.com" class="contact-value">itk.com.ltd@yandex.com</a>
+</div>
+<div class="contact-item">
+  <strong>MAX:</strong><br>
+  <span class="contact-value">+7 906 366 14 13</span>
+</div>
           </div>
 
           <div>
