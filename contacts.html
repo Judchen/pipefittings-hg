@@ -210,20 +210,24 @@
           </div>
 
           <div>
-            <h2>Напишите нам</h2>
-           <form action="https://formspree.io/f/post/itk.com.ltd@yandex.com" method="POST">
-  <label>Ваше имя:
-    <input type="text" name="name" required>
-  </label>
-  <label>Email:
-    <input type="email" name="email" required>
-  </label>
-  <label>Сообщение:
-    <textarea name="message" required></textarea>
-  </label>
-  <button type="submit">Отправить</button>
-</form>
-          </div>
+  <h2>Напишите нам</h2>
+  <form action="https://formsubmit.co/itk.com.ltd@yandex.com" method="POST">
+    <label>Ваше имя:
+      <input type="text" name="name" required>
+    </label>
+    <label>Email:
+      <input type="email" name="email" required>
+    </label>
+    <label>Сообщение:
+      <textarea name="message" required></textarea>
+    </label>
+    <!-- Скрытое поле: отключает CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Скрытое поле: куда вернуться после отправки -->
+    <input type="hidden" name="_next" value="https://pipefittings-hg.ru/contacts.html">
+    <button type="submit">Отправить</button>
+  </form>
+</div>
         </div>
 
         <div style="margin-top: 25px; text-align: center;">
