@@ -475,7 +475,46 @@
   </style>
 </head>
 <body>
+<!-- Language Switcher – Industrial Flag Style -->
+<div style="
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: flex;
+  gap: 14px;
+  z-index: 1000;
+  pointer-events: auto;
+">
+  <!-- RU -->
+  <a href="https://pipefittings-hg.ru" title="Русский" style="display: block; width: 24px; height: 16px; border-radius: 2px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">
+    <svg viewBox="0 0 3 2" style="width:100%; height:auto;">
+      <rect width="3" height="1" y="0" fill="#fff"/>
+      <rect width="3" height="1" y="1" fill="#d52b1e"/>
+      <rect width="3" height="0.66" y="0.66" fill="#0039a6"/>
+    </svg>
+  </a>
 
+  <!-- EN -->
+  <a href="https://pipefittings-hg.com" title="English" style="display: block; width: 24px; height: 16px; border-radius: 2px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">
+    <svg viewBox="0 0 20 10" style="width:100%; height:auto;">
+      <rect width="20" height="10" fill="#012169"/>
+      <path d="M0,0 L20,10 M20,0 L0,10" stroke="#fff" stroke-width="2"/>
+      <path d="M0,0 L20,10 M20,0 L0,10" stroke="#C8102E" stroke-width="1"/>
+      <path d="M0,5 H20 M10,0 V10" stroke="#fff" stroke-width="1.5"/>
+      <path d="M0,5 H20 M10,0 V10" stroke="#C8102E" stroke-width="0.8"/>
+    </svg>
+  </a>
+
+  <!-- AR -->
+  <a href="https://ar.pipefittings-hg.com" title="العربية" style="display: block; width: 24px; height: 16px; border-radius: 2px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.1); direction: ltr;">
+    <svg viewBox="0 0 30 20" style="width:100%; height:auto;">
+      <rect width="30" height="20" fill="#007a3d"/>
+      <rect width="30" height="13.33" y="6.67" fill="#fff"/>
+      <rect width="30" height="6.67" y="13.33" fill="#000"/>
+      <path d="M10,10 L20,5 L20,15 Z" fill="#ce1126"/>
+    </svg>
+  </a>
+</div>
   <!-- HEADER -->
   <header class="header">
     <div class="container header-content">
